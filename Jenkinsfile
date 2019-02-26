@@ -1,9 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('Shell Script') {
+    stage('Build') {
       steps {
-        sh 'printf "test"'
+        echo 'Clean'
+        sh './gradlew clean'
+        echo 'Build'
+        sh './gradlew build'
       }
     }
   }
