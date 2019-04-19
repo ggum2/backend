@@ -7,5 +7,15 @@ pipeline {
         sh './gradlew build'
       }
     }
+    stage('Static Analysis') {
+      steps {
+        sh 'echo "do nothing"'
+      }
+    }
+    stage('Bake Image') {
+      steps {
+        sh 'echo "do nothing"'
+      }
+    }
   }
 }
