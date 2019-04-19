@@ -1,0 +1,22 @@
+#
+# Spring Boot - Common application properties
+#  - https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+#
+server:
+  port: 8013
+
+spring:
+  session:
+    store-type: none
+    redis:
+      flush-mode: on-save
+  thymeleaf:
+    mode: LEGACYHTML5
+  flyway:
+    locations: ["classpath:db"]
+    check-location: true
+
+google:
+  recaptcha:
+    siteKey: 6Ld9iUIUAAAAAIroZpej6tHyQFPFwoYV74GAUrP9
+    secretKey: 6Ld9iUIUAAAAAPGbixClfvB_ZUATzDM8zqYEYyqC
