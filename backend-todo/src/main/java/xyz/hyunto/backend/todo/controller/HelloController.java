@@ -1,13 +1,13 @@
-package xyz.hyunto.backend.auth.controller;
+package xyz.hyunto.backend.todo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController(value = "/auth")
-public class TestController {
+@RestController("/core")
+public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, backend-auth";
+        return "Hello, To-Do Project";
     }
 }
