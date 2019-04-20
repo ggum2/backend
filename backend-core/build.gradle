@@ -1,3 +1,6 @@
 dependencies {
     implementation project(':backend-auth')
+    implementation project(':backend-calendar')
+    implementation project(':backend-photo')
+    implementation project(':backend-todo')
 }
