@@ -1,4 +1,4 @@
-package xyz.hyunto.backend;
+package xyz.hyunto.backend.core;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
