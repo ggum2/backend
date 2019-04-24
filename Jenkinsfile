@@ -10,6 +10,7 @@ pipeline {
     stage('Static Analysis') {
       steps {
         sh 'echo "do nothing"'
+        waitForQualityGate true
       }
     }
     stage('Bake Image') {
