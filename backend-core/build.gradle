@@ -1,37 +1,6 @@
-buildscript {
-    ext {
-        shadowVersion = '4.0.4'
-    }
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath("com.github.jengelman.gradle.plugins:shadow:${shadowVersion}")
-    }
-}
-
-apply plugin: 'com.github.johnrengelman.shadow'
-
 dependencies {
     implementation project(':backend-auth')
     implementation project(':backend-calendar')
     implementation project(':backend-photo')
     implementation project(':backend-todo')
-}
-
-/**
- * Gradle Shadow Plug-in을 이용하여 빌드시 Executable Fat Jar 파일 생성
- */
-jar {
-    finalizedBy shadowJar
-    manifest {
-        attributes 'Main-Class': 'xyz.hyunto.backend.core.BackendApplication'
-    }
-}
-
-shadowJar {
-    baseName = "${rootProject.project.name}"
-    appendix = "all"
-    version = "${rootProject.version}"
-    classifier = null
 }

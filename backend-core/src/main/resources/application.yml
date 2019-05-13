@@ -6,6 +6,8 @@ server:
   port: 8013
 
 spring:
+  main:
+    web-application-type: none
   session:
     store-type: none
     redis:
